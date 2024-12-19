@@ -5,6 +5,7 @@ export type BubbleTheme = {
     chatWindow?: ChatWindowTheme;
     button?: ButtonTheme;
     tooltip?: ToolTipTheme;
+    disclaimer?: DisclaimerPopUpTheme;
 };
 export type TextInputTheme = {
     backgroundColor?: string;
@@ -14,6 +15,10 @@ export type TextInputTheme = {
     maxChars?: number;
     maxCharsWarningMessage?: string;
     autoFocus?: boolean;
+    sendMessageSound?: boolean;
+    sendSoundLocation?: string;
+    receiveMessageSound?: boolean;
+    receiveSoundLocation?: string;
 };
 export type UserMessageTheme = {
     backgroundColor?: string;
@@ -45,6 +50,7 @@ export type ChatWindowTheme = {
     welcomeMessage?: string;
     errorMessage?: string;
     backgroundColor?: string;
+    backgroundImage?: string;
     height?: number;
     width?: number;
     fontSize?: number;
@@ -53,7 +59,13 @@ export type ChatWindowTheme = {
     textInput?: TextInputTheme;
     feedback?: FeedbackTheme;
     footer?: FooterTheme;
+    sourceDocsTitle?: string;
     poweredByTextColor?: string;
+    starterPrompts?: string[];
+    starterPromptFontSize?: number;
+    clearChatOnReload?: boolean;
+    dateTimeToggle?: DateTimeToggleTheme;
+    renderHTML?: boolean;
 };
 export type ButtonTheme = {
     size?: 'small' | 'medium' | 'large' | number;
@@ -63,6 +75,7 @@ export type ButtonTheme = {
     bottom?: number;
     right?: number;
     dragAndDrop?: boolean;
+    autoWindowOpen?: autoWindowOpenTheme;
 };
 export type ToolTipTheme = {
     showTooltip?: boolean;
@@ -70,5 +83,19 @@ export type ToolTipTheme = {
     tooltipBackgroundColor?: string;
     tooltipTextColor?: string;
     tooltipFontSize?: number;
+};
+export type autoWindowOpenTheme = {
+    autoOpen?: boolean;
+    openDelay?: number;
+    autoOpenOnMobile?: boolean;
+};
+export type DisclaimerPopUpTheme = {
+    title?: string;
+    message?: string;
+    buttonText?: string;
+};
+export type DateTimeToggleTheme = {
+    date?: boolean;
+    time?: boolean;
 };
 //# sourceMappingURL=types.d.ts.map
